@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Montreal Hospital Wait Times" data-fr="Temps d'attente des hôpitaux de Montréal">Montreal Hospital Wait Times</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Replace YOUR_API_KEY with your actual API key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZLtuTC8Ayv3ceYFpX4-sbOoaqZdsrZeY&libraries=marker,geometry&loading=async&callback=initMap" defer></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="emergency-banner" id="emergency-banner" style="display: none;">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span data-en="Emergency: High wait times reported at some locations" 
+              data-fr="Urgence : Temps d'attente élevés signalés à certains endroits"></span>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-hospital-alt"></i>
+                    <h1 data-en="Montreal Hospital Wait Times" 
+                        data-fr="Temps d'attente des hôpitaux de Montréal">
+                        Montreal Hospital Wait Times
+                    </h1>
+                </div>
+                <div class="language-toggle">
+                    <button id="lang-en" class="active">EN</button>
+                    <button id="lang-fr">FR</button>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#wait-times">
+                            <i class="fas fa-clock"></i>
+                            <span data-en="Wait Times" data-fr="Temps d'attente">Wait Times</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#map-section">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Hospital Map" data-fr="Carte des hôpitaux">Hospital Map</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-user-md"></i>
+                            <span data-en="Services" data-fr="Services">Services</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="map-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span data-en="Hospital Locations" data-fr="Emplacements des hôpitaux">Hospital Locations</span>
+                </h2>
+            </div>
+            <div class="controls-container">
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input 
+                            type="text" 
+                            id="search" 
+                            placeholder="Search by hospital name or address..."
+                            data-en="Search by hospital name or address..."
+                            data-fr="Rechercher par nom d'hôpital ou adresse..."
+                        >
+                    </div>
+                    <button id="locate-me" class="locate-button" title="Find my location">
+                        <i class="fas fa-location-arrow"></i>
+                        <span class="button-text" data-en="My Location" data-fr="Ma position">My Location</span>
+                    </button>
+                </div>
+                <div class="filter-container">
+                    <select id="service-filter">
+                        <option value="" data-en="All Services" data-fr="Tous les services">All Services</option>
+                    </select>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div id="directions-panel"></div>
+        </section>
+
+        <section id="wait-times">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-clock"></i>
+                    <span data-en="Current Wait Times" data-fr="Temps d'attente actuels">Current Wait Times</span>
+                </h2>
+                <div class="last-updated">
+                    <i class="fas fa-sync-alt"></i>
+                    <span data-en="Updates every 5 minutes" data-fr="Mises à jour toutes les 5 minutes">
+                        Updates every 5 minutes
+                    </span>
+                </div>
+            </div>
+            <div class="wait-times-grid"></div>
+        </section>
+    </main>
+
+    <div id="hospital-details" class="hospital-details-modal">
+        <div class="modal-content">
+            <span class="close-button">
+                <i class="fas fa-times"></i>
+            </span>
+            <div id="hospital-details-content"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>
+                    <i class="fas fa-info-circle"></i>
+                    <span data-en="Data updates every 5 minutes" 
+                          data-fr="Données mises à jour toutes les 5 minutes">
+                        Data updates every 5 minutes
+                    </span>
+                </p>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Montreal Hospital Wait Times</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "Centre hospitalier de l'Université de Montréal": [
+    "Urgence",
+    "Médecine générale",
+    "Cardiologie",
+    "Chirurgie",
+    "Neurologie",
+    "Oncologie",
+    "Obstétrique",
+    "Soins intensifs",
+    "Radiologie",
+    "Orthopédie"
+  ],
+  "Hôpital de Montréal pour enfants": [
+    "Urgence pédiatrique",
+    "Pédiatrie générale",
+    "Cardiologie pédiatrique",
+    "Chirurgie pédiatrique",
+    "Neurologie pédiatrique",
+    "Oncologie pédiatrique",
+    "Soins intensifs pédiatriques",
+    "Psychiatrie pédiatrique"
+  ],
+  "Hôpital Royal Victoria": [
+    "Urgence",
+    "Médecine générale",
+    "Chirurgie",
+    "Cardiologie",
+    "Oncologie",
+    "Transplantation",
+    "Soins intensifs",
+    "Obstétrique"
+  ],
+  "Institut universitaire en santé mentale de Montréal": [
+    "Urgence psychiatrique",
+    "Psychiatrie générale",
+    "Gérontopsychiatrie",
+    "Troubles anxieux",
+    "Troubles de l'humeur",
+    "Psychose",
+    "Dépendances",
+    "Thérapie"
+  ],
+  "Hôpital du Sacré-Cœur de Montréal": [
+    "Urgence",
+    "Médecine générale",
+    "Cardiologie",
+    "Pneumologie",
+    "Traumatologie",
+    "Chirurgie",
+    "Soins intensifs",
+    "Psychiatrie"
+  ],
+  "Institut de Cardiologie de Montréal": [
+    "Urgence cardiologique",
+    "Cardiologie générale",
+    "Chirurgie cardiaque",
+    "Électrophysiologie",
+    "Soins intensifs cardiaques",
+    "Réadaptation cardiaque",
+    "Imagerie cardiaque",
+    "Recherche cardiovasculaire"
+  ]
+}
